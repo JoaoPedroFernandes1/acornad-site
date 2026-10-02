@@ -1,0 +1,28 @@
+.et-fb-settings-options-tab .dgat_advancedtab .et-fb-icon{
+    margin: -5px 0 0 !important;
+}
+.et-fb-settings-options-tab .dgat_advancedtab svg{
+    max-width: 28px;
+    margin: 0 auto;
+}
+.et-fb-settings-options-tab .dgat_advancedtab{
+    background-size: initial !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+    background-color: #FFF4EB !important;
+}
+.et-fb-settings-options-tab .dgat_advancedtab:hover{
+    background-color: #FFE9D7 !important;
+    background-image: url('../img/icon_hover.svg') !important;
+    background-size: initial !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+}
+.et-fb-settings-options-tab [class^="dgat_"],
+.et-fb-settings-options-tab .dgat_advancedtab
+{
+    background-image: url('../img/icon.svg') !important;
+    background-size: initial !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+}
