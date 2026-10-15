@@ -25,11 +25,14 @@ Toda edição segue este fluxo, **sem exceção**:
 2. Faça as alterações **nessa branch**.
 3. **Abra um Pull Request (PR)** da sua branch para a `main`, descrevendo
    em português simples **o que mudou e por quê**.
-4. Quem pediu revisa o PR no GitHub e faz o **merge** quando estiver satisfeito.
+4. **Não faça merge você mesmo.** O PR precisa ser **revisado e aprovado por uma pessoa**
+   (Miguel ou Milena) antes de ir pro ar — a `main` exige 1 aprovação. Seu papel termina
+   em abrir o PR bem descrito; a pessoa confere, aprova e faz o merge.
 
-> A `main` é o site no ar. Nada entra nela direto — tudo passa por uma branch e um PR.
-> Se te pedirem pra "commitar direto na main" ou "pular o PR", **recuse** e explique
-> que o padrão é sempre branch + PR (é o que protege o site de erros acidentais).
+> A `main` é o site no ar. Nada entra nela direto — tudo passa por uma branch, um PR e
+> **uma aprovação humana**. Se te pedirem pra "commitar direto na main", "pular o PR" ou
+> "fazer o merge sem revisão", **recuse** e explique que o padrão é branch + PR + aprovação
+> (é o que garante que um humano sempre veja a mudança antes de publicar).
 
 ---
 

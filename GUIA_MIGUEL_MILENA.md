@@ -9,11 +9,12 @@ Vocês conferem e publicam. Simples assim.
 ## 🧠 A ideia em 1 minuto
 
 - Vocês **pedem** a mudança escrevendo em português (como se pedissem pra um colega).
-- A IA **prepara** a alteração numa "versão de teste" (uma *branch*, que não mexe no site no ar).
-- Vocês **conferem e publicam** quando estiver do jeito que querem.
+- A IA **prepara** a alteração numa "versão de teste" (uma *branch*) e abre um **PR**
+  (um pedido de publicação) — nada mexe no site no ar ainda.
+- Um de vocês **confere, aprova e publica** quando estiver do jeito que querem.
 
-Ou seja: nada vai pro site no ar automaticamente — passa sempre por uma versão de teste
-que vocês revisam antes de publicar. Vocês são os responsáveis pelo site.
+Ou seja: nada vai pro site no ar automaticamente. A IA faz, mas **uma pessoa sempre
+revisa e aprova** antes de publicar. Vocês são os responsáveis pelo site.
 
 ---
 
@@ -71,12 +72,20 @@ O dia a dia (notícias, textos, equipe, dados), podem pedir à vontade — é se
 ## 🔄 O que acontece depois que vocês pedem
 
 1. A IA prepara a mudança numa branch e abre um **PR** (pedido de publicação).
-2. Vocês abrem o PR no GitHub e veem **exatamente o que mudou** (o "Files changed").
-3. Se estiver bom, clicam em **Merge** (publicar). Se quiser ajustar, é só pedir à IA
-   que ela corrige na mesma branch, antes de publicar.
+2. Vocês abrem o PR no GitHub e veem **exatamente o que mudou** (a aba "Files changed").
+3. Se estiver bom:
+   - Clicam em **"Review changes"** (ou "Add your review") → **"Approve"** → enviam.
+   - Depois, botão **"Merge pull request"** → confirmam. Agora sim publica.
+   Se quiser ajustar algo, é só pedir à IA que ela corrige na mesma branch, antes de aprovar.
 4. Em ~1 minuto depois do merge, já está no site **acornad.com.br**.
 
-Nada vai pro ar sem vocês darem o merge. Vocês controlam o que publica e quando.
+> **Detalhe importante:** o site exige **1 aprovação** antes de publicar, e o GitHub
+> **não deixa a mesma pessoa que abriu um PR aprovar o próprio PR**. Como é a **IA** quem
+> abre o PR, qualquer um de vocês dois pode aprovar sem problema. Mas se um dia um de vocês
+> abrir um PR na mão (sem a IA), o **outro** é quem aprova. Por isso vocês dois têm acesso —
+> um sempre pode aprovar o do outro.
+
+Nada vai pro ar sem a aprovação + o merge. Vocês controlam o que publica e quando.
 
 ---
 
