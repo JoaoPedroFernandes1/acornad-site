@@ -25,14 +25,19 @@ Toda edição segue este fluxo, **sem exceção**:
 2. Faça as alterações **nessa branch**.
 3. **Abra um Pull Request (PR)** da sua branch para a `main`, descrevendo
    em português simples **o que mudou e por quê**.
-4. **Não faça merge você mesmo.** O PR precisa ser **revisado e aprovado por uma pessoa**
-   (Miguel ou Milena) antes de ir pro ar — a `main` exige 1 aprovação. Seu papel termina
-   em abrir o PR bem descrito; a pessoa confere, aprova e faz o merge.
+4. **Não faça merge você mesmo.** Quem revisa e faz o merge é o **João Pedro** (dono do
+   repositório). Seu papel termina em abrir o PR bem descrito e mandar o link para ele.
+5. **Não peça aprovação de outras pessoas.** A `main` exige PR, mas **não exige aprovação
+   formal no GitHub**: o GitHub não deixa o autor aprovar o próprio PR, e os PRs que o
+   Claude abre saem na conta do João. A revisão dele é abrir o PR, conferir a aba
+   **"Files changed"** e clicar em **"Merge pull request"**.
 
-> A `main` é o site no ar. Nada entra nela direto — tudo passa por uma branch, um PR e
-> **uma aprovação humana**. Se te pedirem pra "commitar direto na main", "pular o PR" ou
-> "fazer o merge sem revisão", **recuse** e explique que o padrão é branch + PR + aprovação
+> A `main` é o site no ar. Nada entra nela direto: tudo passa por uma branch e um PR, e
+> **um humano (o João) confere e faz o merge**. Se te pedirem pra "commitar direto na main"
+> ou "pular o PR", **recuse** e explique que o padrão é branch + PR + merge feito pelo João
 > (é o que garante que um humano sempre veja a mudança antes de publicar).
+
+Depois do merge, o GitHub Pages publica a mudança em acornad.com.br em poucos minutos.
 
 ---
 
@@ -41,7 +46,9 @@ Toda edição segue este fluxo, **sem exceção**:
 ```
 /                               ← raiz = site em PORTUGUÊS
 ├── index.html                  ← Home PT
-├── quem-somos/index.html       ← + midia/ (imagens da página)
+├── CNAME                       ← mantém o domínio acornad.com.br (NUNCA apagar)
+├── sitemap.xml  robots.txt     ← SEO (ver seção de SEO)
+├── quem-somos/index.html       ← inclui a seção de Time + midia/ (fotos da equipe)
 ├── servicos-e-especialidades/
 ├── cases/
 ├── carreira/                   ← formulário de candidatura (com upload de PDF)
@@ -59,6 +66,26 @@ Toda edição segue este fluxo, **sem exceção**:
 └── assets/                     ← COMPARTILHADO por tudo
     ├── css/  js/  fonts/  img/
 ```
+
+### Equivalência PT ↔ EN
+
+| Português (raiz) | Inglês (/en/) |
+|---|---|
+| `/` (Home) | `en/` |
+| `quem-somos/` | `en/about-us/` |
+| `servicos-e-especialidades/` | `en/services-and-specialties/` |
+| `cases/` | `en/cases/` |
+| `carreira/` | `en/careers/` |
+| `contato/` | `en/contact/` |
+| `na-midia/` | `en/news/` |
+| `politica-de-privacidade/` | `en/privacy-policy/` |
+| `na-midia/noticias/<slug>/` | `en/news/noticias/<slug>/` (mesmo slug) |
+
+As fotos da equipe ficam só em `quem-somos/midia/equipe/`; a página EN aponta para elas
+(`../../quem-somos/midia/equipe/...`).
+
+Se o pedido não disser em qual idioma mudar, **pergunte se é para fazer nos dois**
+(quase sempre é).
 
 ---
 
@@ -192,9 +219,23 @@ do site. Detalhes importantes se for editar essa página:
 
 ---
 
+## Seção de Time (em Quem Somos / About Us)
+
+Os membros ficam em colunas de 1/4 de largura (`et_pb_column_1_4`), **4 por linha**.
+A última coluna de cada linha tem a classe `et-last-child`. Ao adicionar ou remover um
+membro, cuide para a linha fechar certo (o `et-last-child` fica no último da linha) e
+**não deixe conteúdo duplicado** depois do rodapé.
+
+Ao trocar o cargo ou o nome de alguém, altere **só o card daquela pessoa** (outros membros
+podem ter o mesmo cargo): ache o `<h5>` com o nome e troque o texto logo abaixo dele.
+Faça em PT e EN.
+
+---
+
 ## O que NUNCA fazer
 
 - ❌ Commitar direto na `main` (sempre via branch + PR).
+- ❌ Fazer o merge do PR você mesmo (quem faz é o João).
 - ❌ Usar caminhos absolutos (`/pagina/` ou `https://acornad.com.br/...`).
 - ❌ Copiar imagens para `en/news/` (quebra a dedup).
 - ❌ Mexer no `WEBHOOK`, `form_tipo` ou honeypot dos formulários.
@@ -219,5 +260,10 @@ do site. Detalhes importantes se for editar essa página:
 ## Resumo do fluxo (cole isto na cabeça)
 
 > **Pediram uma mudança → crio uma branch → faço na branch → abro um PR explicando
-> o que mudou → aviso quem pediu que o PR está pronto para revisão e merge.**
+> o que mudou → mando o link do PR para o João conferir e fazer o merge.**
 > Nunca commito direto na main — tudo passa por branch + PR.
+
+## Ao terminar uma tarefa
+
+Confirme em português simples o que fez, liste os arquivos alterados e mande o link do
+PR, avisando que está pronto para o João conferir e fazer o merge.
