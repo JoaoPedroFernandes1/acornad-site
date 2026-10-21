@@ -25,17 +25,18 @@ Toda edição segue este fluxo, **sem exceção**:
 2. Faça as alterações **nessa branch**.
 3. **Abra um Pull Request (PR)** da sua branch para a `main`, descrevendo
    em português simples **o que mudou e por quê**.
-4. **Não faça merge você mesmo.** Quem revisa e faz o merge é o **João Pedro** (dono do
-   repositório). Seu papel termina em abrir o PR bem descrito e mandar o link para ele.
+4. **Não faça merge você mesmo.** Quem **pediu a mudança** (João Pedro, Miguel ou Milena)
+   confere o PR e faz o merge. Seu papel termina em abrir o PR bem descrito e mandar o link
+   para essa pessoa.
 5. **Não peça aprovação de outras pessoas.** A `main` exige PR, mas **não exige aprovação
    formal no GitHub**: o GitHub não deixa o autor aprovar o próprio PR, e os PRs que o
-   Claude abre saem na conta do João. A revisão dele é abrir o PR, conferir a aba
+   Claude abre saem na conta de quem pediu. A revisão é abrir o PR, conferir a aba
    **"Files changed"** e clicar em **"Merge pull request"**.
 
 > A `main` é o site no ar. Nada entra nela direto: tudo passa por uma branch e um PR, e
-> **um humano (o João) confere e faz o merge**. Se te pedirem pra "commitar direto na main"
-> ou "pular o PR", **recuse** e explique que o padrão é branch + PR + merge feito pelo João
-> (é o que garante que um humano sempre veja a mudança antes de publicar).
+> **um humano (quem pediu) confere e faz o merge**. Se te pedirem pra "commitar direto na
+> main" ou "pular o PR", **recuse** e explique que o padrão é branch + PR + merge feito por
+> quem pediu (é o que garante que um humano sempre veja a mudança antes de publicar).
 
 Depois do merge, o GitHub Pages publica a mudança em acornad.com.br em poucos minutos.
 
@@ -235,7 +236,7 @@ Faça em PT e EN.
 ## O que NUNCA fazer
 
 - ❌ Commitar direto na `main` (sempre via branch + PR).
-- ❌ Fazer o merge do PR você mesmo (quem faz é o João).
+- ❌ Fazer o merge do PR você mesmo (quem faz é a pessoa que pediu a mudança).
 - ❌ Usar caminhos absolutos (`/pagina/` ou `https://acornad.com.br/...`).
 - ❌ Copiar imagens para `en/news/` (quebra a dedup).
 - ❌ Mexer no `WEBHOOK`, `form_tipo` ou honeypot dos formulários.
@@ -260,10 +261,10 @@ Faça em PT e EN.
 ## Resumo do fluxo (cole isto na cabeça)
 
 > **Pediram uma mudança → crio uma branch → faço na branch → abro um PR explicando
-> o que mudou → mando o link do PR para o João conferir e fazer o merge.**
+> o que mudou → mando o link do PR para quem pediu conferir e fazer o merge.**
 > Nunca commito direto na main — tudo passa por branch + PR.
 
 ## Ao terminar uma tarefa
 
 Confirme em português simples o que fez, liste os arquivos alterados e mande o link do
-PR, avisando que está pronto para o João conferir e fazer o merge.
+PR, avisando que está pronto para a pessoa conferir e fazer o merge.

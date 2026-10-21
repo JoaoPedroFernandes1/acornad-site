@@ -11,10 +11,11 @@ Vocês conferem e publicam. Simples assim.
 - Vocês **pedem** a mudança escrevendo em português (como se pedissem pra um colega).
 - A IA **prepara** a alteração numa "versão de teste" (uma *branch*) e abre um **PR**
   (um pedido de publicação) — nada mexe no site no ar ainda.
-- Um de vocês **confere, aprova e publica** quando estiver do jeito que querem.
+- Quem pediu **confere e publica** quando estiver do jeito que quer — não precisa
+  esperar ninguém aprovar.
 
 Ou seja: nada vai pro site no ar automaticamente. A IA faz, mas **uma pessoa sempre
-revisa e aprova** antes de publicar. Vocês são os responsáveis pelo site.
+confere** antes de publicar. Vocês são os responsáveis pelo site.
 
 ---
 
@@ -73,19 +74,17 @@ O dia a dia (notícias, textos, equipe, dados), podem pedir à vontade — é se
 
 1. A IA prepara a mudança numa branch e abre um **PR** (pedido de publicação).
 2. Vocês abrem o PR no GitHub e veem **exatamente o que mudou** (a aba "Files changed").
-3. Se estiver bom:
-   - Clicam em **"Review changes"** (ou "Add your review") → **"Approve"** → enviam.
-   - Depois, botão **"Merge pull request"** → confirmam. Agora sim publica.
-   Se quiser ajustar algo, é só pedir à IA que ela corrige na mesma branch, antes de aprovar.
-4. Em ~1 minuto depois do merge, já está no site **acornad.com.br**.
+3. Se estiver bom: botão **"Merge pull request"** → **"Confirm merge"**. Agora sim publica.
+   Se quiser ajustar algo, é só pedir à IA que ela corrige na mesma branch, antes do merge.
+4. Em ~1 minuto depois do merge, já está no site **acornad.com.br**
+   (se ainda aparecer o texto antigo, recarregue com Ctrl+F5).
 
-> **Detalhe importante:** o site exige **1 aprovação** antes de publicar, e o GitHub
-> **não deixa a mesma pessoa que abriu um PR aprovar o próprio PR**. Como é a **IA** quem
-> abre o PR, qualquer um de vocês dois pode aprovar sem problema. Mas se um dia um de vocês
-> abrir um PR na mão (sem a IA), o **outro** é quem aprova. Por isso vocês dois têm acesso —
-> um sempre pode aprovar o do outro.
+> **Detalhe importante:** o site **não exige aprovação de outra pessoa**. Quem pediu a
+> mudança confere o PR e faz o merge sozinho(a) — não precisa clicar em "Approve" nem
+> esperar ninguém. (O GitHub nem deixaria: o PR sai na conta de quem pediu, e ninguém
+> pode aprovar o próprio PR.)
 
-Nada vai pro ar sem a aprovação + o merge. Vocês controlam o que publica e quando.
+Nada vai pro ar sem o merge. Vocês controlam o que publica e quando.
 
 ---
 
